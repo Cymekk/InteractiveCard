@@ -1,0 +1,312 @@
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-image: url("../img/bg-main-desktop.png");
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-family: "Space Grotesk", sans-serif;
+}
+
+.card-container {
+	width: 100%;
+	background-color: #fff;
+	min-height: 70vh;
+	margin-top: 30vh;
+
+	.flexbox {
+		width: 70%;
+		min-height: 70vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		margin: 0 auto;
+	}
+
+	.paragraph {
+		margin-bottom: 0.5em;
+		font-size: 0.8rem;
+		color: red;
+		font-weight: bold;
+	}
+
+	.input {
+		width: 100%;
+		margin-bottom: 1em;
+		padding: 10px;
+		border-radius: 5px;
+		border: 1px solid grey;
+	}
+
+	.error {
+		border: 1px solid red;
+		box-shadow: 0 0 5px red;
+	}
+
+	.label {
+		width: 100%;
+		display: block;
+		text-align: left;
+		margin-bottom: 0.5em;
+		text-transform: uppercase;
+		font-size: 1rem;
+	}
+
+	.exp-date-and-cvc {
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+
+		.box {
+			display: inline-block;
+			width: 45%;
+		}
+
+		.exp-date {
+			input {
+				width: 45%;
+			}
+		}
+
+		.cvc-number {
+			input {
+				width: 100%;
+			}
+		}
+	}
+
+	.button {
+		width: 100%;
+		border-radius: 10px;
+		padding: 10px;
+		border: 1px solid transparent;
+		background-image: url("../img/bg-main-mobile.png");
+		background-size: fill;
+		color: white;
+		cursor: pointer;
+		letter-spacing: 1px;
+		font-weight: bold;
+	}
+
+	.confirmation-box {
+		display: none;
+		align-items: center;
+
+		.image {
+			width: 100px;
+			height: 100px;
+			background-image: url("../img/icon-complete.svg");
+			background-repeat: no-repeat;
+			background-size: 100px 100px;
+			margin-bottom: 2em;
+		}
+
+		.thanks {
+			text-transform: uppercase;
+			margin-bottom: 1em;
+			font-size: 1.2rem;
+		}
+
+		.text {
+			margin-bottom: 1em;
+			color: grey;
+		}
+	}
+}
+
+.card {
+	position: absolute;
+	width: 300px;
+	height: 150px;
+	background-size: 300px 150px;
+}
+.back-card {
+	top: 3%;
+	right: 10%;
+	background-image: url("../img/bg-card-back.png");
+
+	&-container {
+		position: relative;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+
+		.back-cvc-number {
+			position: absolute;
+			top: 64px;
+			right: 40px;
+		}
+	}
+}
+
+.front-card {
+	top: 15%;
+	left: 10%;
+	background-image: url("../img/bg-card-front.png");
+
+	&-details {
+		position: relative;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+
+		.circle {
+			position: absolute;
+			border-radius: 50%;
+		}
+
+		.big-circle {
+			top: 15px;
+			left: 15px;
+			height: 30px;
+			width: 30px;
+			background-color: #fff;
+		}
+
+		.small-circle {
+			left: 55px;
+			top: 20px;
+			height: 20px;
+			width: 20px;
+			border: 1px solid white;
+		}
+
+		.details {
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 90%;
+			font-weight: bold;
+			color: #fff;
+			font-size: 1rem;
+			letter-spacing: 2px;
+		}
+
+		.front-card-number {
+			bottom: 60px;
+			text-align: center;
+		}
+
+		.front-card-name-and-exp-date {
+			bottom: 10px;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+	}
+}
+
+@media (min-width: 576px) {
+	.back-card {
+		top: 3%;
+		right: 10%;
+	}
+
+	.front-card {
+		top: 17%;
+		left: 10%;
+	}
+}
+
+@media (min-width: 768px) {
+	.card {
+		width: 400px;
+		height: 200px;
+		background-size: 400px 200px;
+	}
+
+	.back-card {
+		top: 3%;
+		right: 10%;
+
+		.back-cvc-number {
+			top: 88px;
+			right: 42px;
+		}
+	}
+
+	.front-card {
+		top: 17%;
+		left: 10%;
+	}
+}
+
+@media (min-width: 992px) {
+	.card-container {
+		width: 60vw;
+		min-height: 100vh;
+		margin-left: 40vw;
+		margin-top: 0;
+
+		.flexbox {
+			min-height: 100vh;
+			width: 60%;
+		}
+	}
+
+	.front-card {
+		left: 26%;
+		top: 38%;
+		transform: translate(-50%, -50%);
+	}
+
+	.back-card {
+		left: 30%;
+		top: 60%;
+		transform: translate(-50%, -50%);
+		box-shadow: 0px 0px 10px black;
+		border-radius: 10px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.card-container {
+		.flexbox {
+			width: 50%;
+		}
+	}
+
+	.card {
+		width: 500px;
+		height: 250px;
+		background-size: 500px 250px;
+		transform: translate(-50%, -50%);
+	}
+
+	.back-card {
+		top: 60%;
+		left: 35%;
+
+		.back-cvc-number {
+			top: 112px;
+			right: 50px;
+		}
+	}
+
+	.front-card {
+		top: 30%;
+		left: 30%;
+
+		.front-card-number {
+			bottom: 100px;
+			text-align: center;
+		}
+
+		.front-card-name-and-exp-date {
+			bottom: 20px;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+	}
+}

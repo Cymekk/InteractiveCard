@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interaktywna karta</title>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./dist/css/style.min.css">
+</head>
+
+<body>
+    <div class="card-container">
+        <div class="flexbox card-container-details">
+            <label for="" class="label">cardholder name</label>
+            <input type="text" class="input name" placeholder="e.g. Jan Kowalski">
+            <p class="paragraph cardholder"> </p>
+            <label for="" class="label">card number</label>
+            <input type="number" class="input number" placeholder="0000 0000 0000 0000">
+            <p class="paragraph card-number"> </p>
+            <div class="exp-date-and-cvc">
+                <div class="box exp-date">
+                    <label for="" class="label">exp. date(mm/yy)</label>
+                    <input type="number" class="input month" placeholder="MM">
+                    <input type="number" class="input year" placeholder="YY">
+                    <p class="paragraph date"> </p>
+                    <p class="paragraph date"> </p>
+                </div>
+
+                <div class="box cvc-number">
+                    <label for="" class="label">cvc</label>
+                    <input type="number" class="input cvc-input" placeholder="e.g. 123">
+                    <p class="paragraph cvc"></p>
+                </div>
+            </div>
+
+            <button class="button confirm-btn">Confirm</button>
+        </div>
+
+        <div class="flexbox confirmation-box">
+            <div class="image"></div>
+            <div class="thanks">Thank you!</div>
+            <div class="text">We've added your card details</div>
+            <button class="button continue-btn">Continue</button>
+        </div>
+    </div>
+
+    <div class="card back-card">
+        <div class="back-card-container">
+            <div class="back-cvc-number"></div>
+        </div>
+    </div>
+
+    <div class="card front-card">
+        <div class="front-card-details">
+            <div class="circle big-circle"></div>
+            <div class="circle small-circle"></div>
+            <div class="details front-card-number"></div>
+
+            <div class="details front-card-name-and-exp-date">
+                <div class="front-name"></div>
+                <div class="front-exp-date"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./dist/js/index.min.js"></script>
+</body>
+
+</html>
